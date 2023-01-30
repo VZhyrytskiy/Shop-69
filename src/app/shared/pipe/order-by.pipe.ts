@@ -13,6 +13,7 @@ export class OrderByPipe implements PipeTransform {
     array.sort((a: any, b: any) => {
       let firstItem = a[orderBy]
       let secondItem = b[orderBy]
+      // Чаще используется === вместо ==
       if(firstItem == undefined && secondItem == undefined) return 0
       if(firstItem == undefined && secondItem != undefined) return isAsc ? 1 : -1
       if(firstItem != undefined && secondItem == undefined) return isAsc ? -1 : 1

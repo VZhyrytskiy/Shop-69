@@ -82,6 +82,7 @@ export class ProductsService {
     stock: 14
     }
   ]
+  // почему с верхнего регистра?
   Products$: BehaviorSubject<ProductModel[]>
 
   constructor() {
